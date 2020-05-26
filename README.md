@@ -33,13 +33,13 @@ A configuration file should be written in JSON prior to use pgsql2osm.sh:
 
 ```json
 {
-    "input_ways": Input table with ways,
-    "input_nodes": Input table with nodes (optional),
-    "output_ways": Output table for ways,
-    "output_nodes": Output table for nodes,
-    "output_waysnodes": Output table for ways / nodes linkage,
-    "coordinates_resolution": Integer > 0 used to define how many decimals are kept in WGS84 coordinates to deduplicate nodes,
-    "coordinates_prime": A prime number > 10^resolution to compute hashcode of nodes coordinates to give them usine ids
+    "input_ways": "'ways' // Input table with ways",
+    "input_nodes": "'nodes' // Input table with nodes (optional)",
+    "output_ways": "'tway' // Output table for ways",
+    "output_nodes": "'tnode' // Output table for nodes",
+    "output_waysnodes": "'twnode' // Output table for ways / nodes linkage",
+    "coordinates_resolution": "7 // Integer > 0 used to define how many decimals are kept in WGS84 coordinates to deduplicate nodes",
+    "coordinates_prime": "10000000 //"An integer number>=10^resolution to compute hashcode of nodes coordinates to give them usine ids - not a prime!"
 }
 ```
 
